@@ -240,9 +240,9 @@ public class CodeToCode extends JFrame {
 		int tenNumber = Integer.parseInt(tenNumberStr);
 		String twoNumber = Integer.toBinaryString(tenNumber);
 		all.put("二进制码", twoNumber);
-		String gray = String.valueOf(temp8421.charAt(0));
-		for(i = 0; i < temp8421.length() - 1; i ++){
-			if(temp8421.charAt(i) == temp8421.charAt(i + 1)){
+		String gray = String.valueOf(twoNumber.charAt(0));
+		for(i = 0; i < twoNumber.length() - 1; i ++){
+			if(twoNumber.charAt(i) == twoNumber.charAt(i + 1)){
 				gray += "0";
 			}else{
 				gray += "1";
@@ -339,6 +339,8 @@ public class CodeToCode extends JFrame {
 	}
 	
 	class MyTable extends JTable{
+		private static final long serialVersionUID = 1L;
+
 		public MyTable(DefaultTableModel dlm){
 			super(dlm);
 		}
